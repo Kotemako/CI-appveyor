@@ -14,15 +14,15 @@ class MobileBankApiTestV5 {
         // Given - When - Then
         // Предусловия
         given()
-                .baseUri("http://localhost:9999/api/v1")
+                    .baseUri("http://localhost:9999/api/v1")
                 // Выполняемые действия
                 .when()
-                .get("/demo/accounts")
+                    .get("/demo/accounts")
                 // Проверки
                 .then()
-                .statusCode(200)
-                .contentType(ContentType.JSON)
-                .body("every{ it.balance >= 0 }", is(true))
+                    .statusCode(200)
+                    .contentType(ContentType.JSON)
+                    .body("every{ it.balance >= 0 }", is(true))
         ;
     }
 }
